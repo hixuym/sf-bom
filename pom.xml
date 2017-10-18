@@ -12,7 +12,7 @@
   <artifactId>sf-bom</artifactId>
   <packaging>pom</packaging>
 
-  <name>Sunflower Bom</name>
+  <name>sunflower bom</name>
 
   <description>
     Bill of materials to make sure a consistent set of versions is used for Sunflower generics.
@@ -22,8 +22,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <sf-framework.version>1.0.0</sf-framework.version>
-    <sf-gizmo.version>1.0.0</sf-gizmo.version>
+    <sf-framework.version>1.1.0</sf-framework.version>
+    <sf-ewf.version>1.1.0</sf-ewf.version>
 
     <guava.version>23.2-jre</guava.version>
     <guice.version>4.1.0</guice.version>
@@ -887,32 +887,38 @@
 
       <dependency>
         <groupId>io.sunflower</groupId>
-        <artifactId>sf-gizmo-core</artifactId>
-        <version>${sf-gizmo.version}</version>
+        <artifactId>sf-ewf-core</artifactId>
+        <version>${sf-ewf.version}</version>
       </dependency>
 
       <dependency>
         <groupId>io.sunflower</groupId>
-        <artifactId>sf-gizmo-freemarker</artifactId>
-        <version>${sf-gizmo.version}</version>
+        <artifactId>sf-ewf-freemarker</artifactId>
+        <version>${sf-ewf.version}</version>
       </dependency>
 
       <dependency>
         <groupId>io.sunflower</groupId>
-        <artifactId>sf-gizmo-session</artifactId>
-        <version>${sf-gizmo.version}</version>
+        <artifactId>sf-ewf-session</artifactId>
+        <version>${sf-ewf.version}</version>
       </dependency>
 
       <dependency>
         <groupId>io.sunflower</groupId>
-        <artifactId>sf-gizmo-websocket</artifactId>
-        <version>${sf-gizmo.version}</version>
+        <artifactId>sf-ewf-websocket</artifactId>
+        <version>${sf-ewf.version}</version>
       </dependency>
 
       <dependency>
         <groupId>io.sunflower</groupId>
-        <artifactId>sf-gizmo-xml</artifactId>
-        <version>${sf-gizmo.version}</version>
+        <artifactId>sf-ewf-xml</artifactId>
+        <version>${sf-ewf.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>io.sunflower</groupId>
+        <artifactId>sf-ewf-undertow</artifactId>
+        <version>${sf-ewf.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
