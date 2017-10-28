@@ -22,8 +22,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <sf-framework.version>1.2.0</sf-framework.version>
-    <sf-ewf.version>1.1.0</sf-ewf.version>
+    <sf-framework.version>1.3.1-SNAPSHOT</sf-framework.version>
+    <sf-ewf.version>1.1.1-SNAPSHOT</sf-ewf.version>
 
     <guava.version>23.2-jre</guava.version>
     <guice.version>4.1.0</guice.version>
@@ -72,10 +72,24 @@
     <mockito.version>2.10.0</mockito.version>
     <assertj.version>3.6.2</assertj.version>
 
+    <shiro.version>1.4.0</shiro.version>
+    <reflections.version>0.9.11</reflections.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.reflections</groupId>
+        <artifactId>reflections</artifactId>
+        <version>${reflections.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.shiro</groupId>
+          <artifactId>shiro-core</artifactId>
+          <version>${shiro.version}</version>
+      </dependency>
+
       <!-- excellent io lib -->
       <dependency>
         <groupId>com.squareup.okio</groupId>
@@ -789,7 +803,7 @@
 
       <dependency>
         <groupId>io.sunflower</groupId>
-        <artifactId>sf-guicey</artifactId>
+        <artifactId>sf-guice</artifactId>
         <version>${sf-framework.version}</version>
       </dependency>
 
@@ -865,12 +879,6 @@
 
       <dependency>
         <groupId>io.sunflower</groupId>
-        <artifactId>sf-sec</artifactId>
-        <version>${sf-framework.version}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>io.sunflower</groupId>
         <artifactId>sf-postoffice</artifactId>
         <version>${sf-framework.version}</version>
       </dependency>
@@ -899,7 +907,7 @@
 
       <dependency>
         <groupId>io.sunflower</groupId>
-        <artifactId>sf-ewf-session</artifactId>
+        <artifactId>sf-ewf-auth</artifactId>
         <version>${sf-ewf.version}</version>
       </dependency>
 
