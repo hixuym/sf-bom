@@ -22,12 +22,12 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <sf-framework.version>1.4.0</sf-framework.version>
-    <sf-ewf.version>1.1.1-SNAPSHOT</sf-ewf.version>
+    <sf-framework.version>1.4.2-SNAPSHOT</sf-framework.version>
+    <sf-ewf.version>1.2.1-SNAPSHOT</sf-ewf.version>
 
     <guava.version>23.2-jre</guava.version>
     <guice.version>4.1.0</guice.version>
-    <jackson.version>2.9.1</jackson.version>
+    <jackson.version>2.9.2</jackson.version>
     <metrics3.version>3.2.5</metrics3.version>
     <slf4j.version>1.7.25</slf4j.version>
     <logback.version>1.2.3</logback.version>
@@ -49,7 +49,7 @@
     <cassandra.driver.version>3.3.0</cassandra.driver.version>
     <jedis.version>2.9.0</jedis.version>
     <tomcat.jdbc.version>8.5.23</tomcat.jdbc.version>
-    <ebean.version>11.2.1</ebean.version>
+    <ebean.version>11.2.3</ebean.version>
     <liquibase.version>3.5.3</liquibase.version>
     <spymemcached.version>2.12.3</spymemcached.version>
     <woodstox.version>5.0.3</woodstox.version>
