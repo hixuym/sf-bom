@@ -22,7 +22,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <sf-framework.version>1.5.0</sf-framework.version>
+    <sf-framework.version>1.5.1-SNAPSHOT</sf-framework.version>
     <sf-ewf.version>1.2.1-SNAPSHOT</sf-ewf.version>
 
     <guava.version>23.2-jre</guava.version>
@@ -36,7 +36,7 @@
     <postgresql.version>42.1.4</postgresql.version>
     <freemarker.version>2.3.26-incubating</freemarker.version>
     <mybatis.version>3.4.5</mybatis.version>
-    <undertow.version>1.4.20.Final</undertow.version>
+    <undertow.version>1.4.21.Final</undertow.version>
     <netty.version>4.1.16.Final</netty.version>
     <okhttp.version>3.9.0</okhttp.version>
     <retrofit.version>2.3.0</retrofit.version>
@@ -74,16 +74,38 @@
 
     <shiro.version>1.4.0</shiro.version>
     <reflections.version>0.9.11</reflections.version>
+    <resteasy.version>3.1.4.Final</resteasy.version>
+
+    <boringssl.version>2.0.7</boringssl.version>
+
   </properties>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-          <groupId>javax.servlet</groupId>
-          <artifactId>javax.servlet-api</artifactId>
-          <version>3.1.0</version>
+          <groupId>org.jboss.resteasy</groupId>
+          <artifactId>resteasy-jaxrs</artifactId>
+          <version>${resteasy.version}</version>
       </dependency>
-            
+
+      <dependency>
+          <groupId>org.jboss.resteasy</groupId>
+          <artifactId>resteasy-wadl</artifactId>
+          <version>${resteasy.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.jboss.resteasy</groupId>
+          <artifactId>resteasy-netty</artifactId>
+          <version>${resteasy.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.jboss.resteasy</groupId>
+          <artifactId>resteasy-netty4</artifactId>
+          <version>${resteasy.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>org.reflections</groupId>
         <artifactId>reflections</artifactId>
@@ -157,7 +179,7 @@
       <dependency>
         <groupId>io.netty</groupId>
         <artifactId>netty-tcnative-boringssl-static</artifactId>
-        <version>2.0.6.Final</version>
+        <version>${boringssl.version}</version>
       </dependency>
 
       <dependency>
@@ -191,6 +213,18 @@
         <version>${undertow.version}</version>
       </dependency>
 
+      <dependency>
+        <groupId>io.undertow</groupId>
+        <artifactId>undertow-websockets-jsr</artifactId>
+        <version>${undertow.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>io.undertow</groupId>
+        <artifactId>undertow-servlet</artifactId>
+        <version>${undertow.version}</version>
+      </dependency>
+
       <!-- google 开源框架 -->
       <dependency>
         <groupId>com.google.guava</groupId>
@@ -213,6 +247,12 @@
       <dependency>
         <groupId>com.google.inject.extensions</groupId>
         <artifactId>guice-assistedinject</artifactId>
+        <version>${guice.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.google.inject.extensions</groupId>
+        <artifactId>guice-servlet</artifactId>
         <version>${guice.version}</version>
       </dependency>
 
@@ -786,6 +826,18 @@
       <dependency>
         <groupId>io.sunflower</groupId>
         <artifactId>sf-jackson</artifactId>
+        <version>${sf-framework.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>io.sunflower</groupId>
+        <artifactId>sf-resteasy</artifactId>
+        <version>${sf-framework.version}</version>
+      </dependency>
+
+       <dependency>
+        <groupId>io.sunflower</groupId>
+        <artifactId>sf-resteasy-netty</artifactId>
         <version>${sf-framework.version}</version>
       </dependency>
 
